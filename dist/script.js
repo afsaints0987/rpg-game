@@ -6,6 +6,7 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 
+const support = document.querySelector('#support')
 const button1 = document.querySelector("#button1");
 const button2 = document.querySelector("#button2");
 const button3 = document.querySelector("#button3");
@@ -246,6 +247,9 @@ function lose() {
 
 function winGame() {
   update(locations[6])
+  setTimeout(() => {
+    support.style.display = "flex";
+  }, 2000);
 }
 
 function defeatMonster() {
@@ -303,3 +307,4 @@ function pickTwo(){
 function pickEight() {
   pick(8)
 }
+
